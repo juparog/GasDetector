@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="/css/alertify/css/alertify.css">
+<link rel="stylesheet" href="/css/alertify/css/themes/default.css">
+<div class="container">
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <!-- Widget: user parametros style 2 -->
+        <div class="card card-widget widget-user-2">
+          <!-- Add the bg color to the header using any of the bg-* classes -->
+          <div class="widget-user-header bg-info">
+            <div class="widget-user-image">
+                <img src="/img/drone_128x128.png" class="img-circle elevation-2" , width="30", height="30" alt="">
+            </div>
+            <!-- /.widget-parametros -->
+            <h3 class="widget-user-username h5">
+              <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Parametros de 
+              </font></font>
+            </h3>
+            <h5 class="widget-user-desc">
+              <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">comunicación 
+              </font>
+              </font>
+            </h5>
+          </div>
+          <div class="card-footer p-0">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Puerto </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font id="port" style="vertical-align: inherit;">{{ port }}</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Baudrate </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">9600</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Data bits </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">8</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Stop bits </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">1</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Parity </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">NONE</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-dark">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Timeout </font>
+                    </font><span class="float-right badge bg-secondary">
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">100</font>
+                    </font>
+                    </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.widget-parametros -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-8">
+        <!-- Widget: user widget style 1 -->
+        <div class="card card-widget widget-user">
+          <!-- Add the bg color to the header using any of the bg-* classes -->
+          <div class="widget-user-header bg-secondary h-auto">
+            <h3 class="widget-user-username">
+                <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">GasDetector: 
+                <span class="text-success"><strong> Conectado </strong></span>
+                </font></font>
+            </h3>
+            <h5 class="widget-user-desc mb-3">
+                <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Lecturas actuales
+                </font></font>
+            </h5>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                    <h5 class="description-header">
+                        <font style="vertical-align: inherit;">
+                        <font id="value_s1" class="h1 text-primary" style="vertical-align: inherit;">....
+                        </font></font>
+                    </h5>
+                    <span class="description-text">
+                        <font style="vertical-align: inherit;">
+                        <font id="type_s1" class="h3 text-muted" style="vertical-align: inherit;">MQ-X1
+                        </font></font>
+                    </span>
+                    <span class="description-text text-muted">
+                        ppm
+                    </span>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                    <h5 class="description-header">
+                        <font style="vertical-align: inherit;">
+                        <font id="value_s2" class="h1 text-primary" style="vertical-align: inherit;">....
+                        </font></font>
+                    </h5>
+                    <span class="description-text">
+                        <font style="vertical-align: inherit;">
+                        <font id="type_s2" class="h3 text-muted" style="vertical-align: inherit;">MQ-X2
+                        </font></font>
+                    </span>
+                    <span class="description-text text-muted">
+                        ppm
+                    </span>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4">
+                <div class="description-block">
+                    <h5 class="description-header">
+                        <font style="vertical-align: inherit;">
+                        <font id="value_s3" class="h1 text-primary" style="vertical-align: inherit;">....
+                        </font></font>
+                    </h5>
+                    <span class="description-text">
+                        <font style="vertical-align: inherit;">
+                        <font id="type_s3" class="h3 text-muted" style="vertical-align: inherit;">MQ-X3
+                        </font></font>
+                    </span>
+                    <span class="description-text text-muted">
+                        ppm
+                    </span>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+        </div>
+        <!-- /.widget-user -->
+        <form action="/measures/current-close" method="POST">
+          <div class="card card-widget widget-user">
+            <div class="widget-user-header badge-light h-auto">
+              <button class="btn btn-danger float-right">Desconectar</button>
+            </div>
+          </div>
+        </form>
+        <!-- /.wiget 2-footer -->
+      </div>
+      <!-- /.col -->
+      <!-- Grafica -->
+      <div class="container mt-0 mb-lg-5">
+         <div class="card m-lg-0">
+           <div class="card-body bg-light">
+             <canvas id="myChart"></canvas>
+           </div>
+         </div>
+      </div>
+    </div>
+</div>
+<!-- Sockets.io -->
+<script src="/socket.io/socket.io.js"></script>
+<!-- Charjs -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!-- JQuery 
+<script src="/js/jquery.js"></script>-->
+<!-- Notifyjs -->
+<script src="/js/alertify.js"></script>
+<!-- Custom js -->
+<script src="/js/comunication-sp.js"></script>
