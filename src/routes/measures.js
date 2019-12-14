@@ -20,14 +20,21 @@ router.get('/measures/real-time', isAuthenticated, (req, res) => {
 
 // Post Real Time Measures
 router.post('/measures/current', (req, res) => {
-    const { port } = req.body;
+    const { port, name_measure } = req.body;
     const erros = [];
+    var focus = 1;
     if (!port) {
         erros.push({ text: "Por favor ingrese el puerto" });
+    } else if (!name_measure) {
+        erros.push({ text: "Por favor ingrese un nombre a la medición" });
+        focus = 2;
     }
     if (erros.length > 0) {
         res.render('measures/new-measure', {
-            erros
+            erros,
+            port,
+            name_measure,
+            focus
         });
     } else {
         const ReadLine = serialport.parsers.Readline;
@@ -37,13 +44,15 @@ router.post('/measures/current', (req, res) => {
         });
         const parser = sp.pipe(new ReadLine({ delimiter: '\r\n' }));
         sp.open(function(err) {
+            console.log(test);
             if (err) {
                 console.log('Error al intentar abrir el puerto: ' + err.message);
             } else {
                 console.log('Conexion serial exitosa');
             }
         });
-        parser.on('data', function(data) {
+        res.render('index');
+        /* parser.on('data', function(data) {
             console.log('SerialData: ' + data);
             global.io.emit('SerialData', data.toString());
             const serial_data = JSON.parse(data);
@@ -68,7 +77,7 @@ router.post('/measures/current', (req, res) => {
 
         res.render('measures/real-time-measures', {
             port
-        })
+        })*/
     }
 });
 
@@ -81,11 +90,6 @@ router.post('/measures/current-close', (req, res) => {
 
 // Ver medidas
 router.get('/measures/show', isAuthenticated, async(req, res) => {
-    // const measures = await Measure.find();
-    /* await measures.forEach(async function(element) {
-        global.io.emit('ShowPlotData', element);
-        new Promise(resolve => setTimeout(resolve, 1000));
-    }); */
     res.render('measures/show-measures');
 });
 

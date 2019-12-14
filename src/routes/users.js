@@ -41,10 +41,19 @@ router.get('/users/signin', (req, res) => {
 });
 
 router.post('/users/signin', passport.authenticate('local', {
-    successRedirect: '/',
+    //successRedirect: '/',
     failureRedirect: '/users/signin',
-    failureFlash: true
-}));
+    failureFlash: 'Correo o contraseña invalidos',
+    successFlash: 'Bienbenido!'
+}), function(req, res) {
+    if (req.body.original_url == "/measures/add") {
+        res.redirect('/measures/add');
+    } else if (req.body.original_url == "/measures/show") {
+        res.redirect('measures/show-measures');
+    } else {
+        res.redirect('index');
+    }
+});
 
 router.get('/users/logout', (req, res) => {
     req.logout();
